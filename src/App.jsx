@@ -8,7 +8,7 @@ const App = () => {
     fontFamily: null,
     fontSize: 15,
     bold: false,
-    italic: true,
+    italic: false,
     underline: false,
   });
 
@@ -31,7 +31,7 @@ const App = () => {
   };
 
   const onClickAddText = () => {
-    setValue({ ...value, textBoxes: value.textBoxes.push("Add Text here") });
+    setValue({ ...value, textBoxes: [...value.textBoxes, "Add Text here"] });
   };
 
   const onClickBold = () => {
@@ -53,7 +53,7 @@ const App = () => {
         <ul className="relative bg-white w-[90%] md:w-[80%] h-80 md:h-96 rounded-sm shadow-sm p-5">
           {value.textBoxes.map((eachTextBox) => (
             <li key={eachTextBox.index}>
-              <Draggable bounds={{ left: 0, top: 0, right: 460, bottom: 320 }}>
+              <Draggable bounds={{ left: 0, top: 0, right: 500, bottom: 320 }}>
                 <input
                   style={{ fontSize: `${value.fontSize}px` }}
                   type="text"
