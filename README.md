@@ -8,6 +8,10 @@ Tech:
 Tools:
     *VSCode
 
+For Use:
+   -> npm install
+   -> npm run dev
+
 
 Author: Pradeep Arivazhagan
 Visit: https://pradeeparivazhaganportfolio.vercel.app/
